@@ -8,6 +8,46 @@
   </head>
 
   <body>
-    
+    <div class="scores"><a href="scores.html">View Highest Scores</a></div>
+    <!--Setting Timer-->
+    <div class="timer">Time: <span id="time">0</span></div>
+
+    <div class="wrapper">
+      <!--Starting screen-->
+      <div id="start-screen" class="start">
+        <h1>Pizza Quiz Challenge</h1>
+
+        <p>
+          Answer the following pizza trivia questions within the time
+          limit. Incorrect answers will lower your
+          score/time by ten seconds. Have fun!
+        </p>
+
+        <button id="start">Start</button>
+
+      </div>
+
+      <div id="questions" class="hide">
+
+        <h2 id="question-prompt"></h2>
+        <div id="options" class="options"></div>
+
+      </div>
+
+        <!--Final screen-->
+      <div id="final-screen" class="hide">
+        <h2>You did it!</h2>
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>
+          Enter initials: <input type="text" id="initials"/>
+          <button id="submit">Enter</button>
+        </p>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/functions.js"></script>
   </body>
 </html>
