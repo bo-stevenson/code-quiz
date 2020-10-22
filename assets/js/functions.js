@@ -1,4 +1,4 @@
-// variables to keep track of quiz state
+
 var currentQuestionCount = 0;
 var time = questions.length * 20;
 var timer;
@@ -103,7 +103,7 @@ function quizEnd() {
   var finalScoreEl = document.getElementById("final-score");
   finalScoreEl.textContent = time;
 
-  // hide questions section
+  /* hide questions section */
   questionsEl.setAttribute("class", "hide");
 }
 
@@ -118,7 +118,7 @@ function clock() {
 function saveScore() {
   
   var initials = initialsEl.value.trim();
-
+/*user can't enter a blank initials*/
   if (initials !== "") {
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
